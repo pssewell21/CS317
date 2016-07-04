@@ -51,6 +51,7 @@
     <Compile Include="Operations\BubbleSort\BubbleSort.cs" />
     <Compile Include="Operations\FactorialCalculator\FactorialCalculator.cs" />
     <Compile Include="Operations\MergeSort\MergeSort.cs" />
+    <Compile Include="Operations\QuickSort\QuickSort.cs" />
     <Compile Include="Operations\TelephoneDirectorySearch\TelephoneDirectoryEntry.cs" />
     <Compile Include="Operations\TelephoneDirectorySearch\TelephoneDirectorySearch.cs" />
     <Compile Include="Program.cs" />
