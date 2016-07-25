@@ -3,6 +3,7 @@ using CS317Program.Operations.BubbleSort;
 using CS317Program.Operations.FactorialCalculator;
 using CS317Program.Operations.MergeSort;
 using CS317Program.Operations.TelephoneDirectorySearch;
+using CS317Program.Operations.QuickSort;
 using System;
 using BruteForcePasswordGenerator = Library.Operations.BruteForcePasswordGenerator;
 using BruteForcePasswordGeneratorCSharp = CS317Program.Operations.BruteForcePasswordGenerator;
@@ -42,6 +43,10 @@ namespace CS317Program
                 case 7:
                     var t7 = new BruteForcePasswordGeneratorCSharp.BruteForcePasswordGenerator();
                     t7.Run();
+                    break;
+                case 8:
+                    var t8 = new QuickSort();
+                    t8.Run();
                     break;
                 // Quit case
                 case 0:

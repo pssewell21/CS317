@@ -169,6 +169,24 @@ namespace CS317Program {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quick Sort.
+        /// </summary>
+        internal static string QuickSortName {
+            get {
+                return ResourceManager.GetString("QuickSortName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 8.
+        /// </summary>
+        internal static string QuickSortValue {
+            get {
+                return ResourceManager.GetString("QuickSortValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quit.
         /// </summary>
         internal static string QuitName {

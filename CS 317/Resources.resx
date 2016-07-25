@@ -153,6 +153,12 @@
   <data name="MergeSortValue" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="QuickSortName" xml:space="preserve">
+    <value>Quick Sort</value>
+  </data>
+  <data name="QuickSortValue" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="QuitName" xml:space="preserve">
     <value>Quit</value>
   </data>
