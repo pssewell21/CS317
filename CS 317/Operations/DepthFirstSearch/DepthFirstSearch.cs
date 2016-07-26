@@ -1,6 +1,7 @@
 ﻿using CS317Program.Data_Structures.Graph;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CS317Program.Operations.DepthFirstSearch
 {
@@ -24,26 +25,30 @@ namespace CS317Program.Operations.DepthFirstSearch
             var vertex = GetStartingVertex();
 
             stack.Push(vertex);
+            vertex.dfsStepDiscovered = step;
+            step++;
             Console.WriteLine("\n{0}", vertex.GetDfsStatusString());
 
             while (stack.Count != 0)
             {
-                vertex = stack.Pop();
-                Console.WriteLine("{0}", vertex.GetDfsStatusString());
+                var peekVertex = stack.Peek();
 
-                if (vertex.dfsStepDiscovered == -1 && !stack.Contains(vertex))
+                var adjacentVertexList = peekVertex.GetAdjacentVertexList();
+                var adjacentVertex = adjacentVertexList.FirstOrDefault(o => o.dfsStepDiscovered == 0);
+
+                if (adjacentVertex != null)
                 {
-                    vertex.dfsStepDiscovered = step;
+                    stack.Push(adjacentVertex);
+                    adjacentVertex.dfsStepDiscovered = step;
                     step++;
-
-                    foreach(var item in vertex.GetAdjacentVertexList())
-                    {
-                        if (item.dfsStepDiscovered == -1)
-                        {
-                            stack.Push(item);
-                            Console.WriteLine("{0}", vertex.GetDfsStatusString());
-                        }
-                    }
+                    Console.WriteLine("{0}", adjacentVertex.GetDfsStatusString());
+                }
+                else
+                {
+                    var popVertex = stack.Pop();
+                    popVertex.dfsStepProcessed = step;
+                    step++;
+                    Console.WriteLine("{0}", popVertex.GetDfsStatusString());
                 }
             }
         }

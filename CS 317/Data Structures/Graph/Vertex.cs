@@ -8,10 +8,9 @@ namespace CS317Program.Data_Structures.Graph
     {
         private readonly string _name;
         private List<Vertex> _adjacentVertexList;
-
-        public bool visited = false;
-        public int dfsStepDiscovered = -1;
-        public int dfsStepProcessed = -1;
+        
+        public int dfsStepDiscovered = 0;
+        public int dfsStepProcessed = 0;
 
         public Vertex(string name)
         {
