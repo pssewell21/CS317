@@ -23,23 +23,21 @@ namespace CS317Program.Data_Structures.Graph
             }
         }
 
-        public void GetVertexInput(List<char> validVertexNameList)
+        public void GetVertexInput()
         {
             var done = false;
 
             while (!done)
             {
-                var message = "\nEnter the name for a vertex to attach other vertices to. Enter \"Q\" to quit: ";
+                var selectedVertexName = GetVertexNameInput("\nEnter the name for a vertex to attach other vertices to. Enter \"Q\" to quit: ");
 
-                var selecedVertexName = GetVertexNameInput(validVertexNameList, message);
-
-                if (selecedVertexName.Equals("Q"))
+                if (selectedVertexName.Equals("Q"))
                 {
                     done = true;
                 }
                 else
                 {
-                    var selectedVertex = _vertexList.FirstOrDefault(o => o.ToString().Equals(selecedVertexName));
+                    var selectedVertex = _vertexList.FirstOrDefault(o => o.ToString().Equals(selectedVertexName));
 
                     if (selectedVertex != null)
                     {
@@ -53,16 +51,16 @@ namespace CS317Program.Data_Structures.Graph
 
                             while (!finished)
                             {
-                                var message2 = string.Format("\nEnter the name for a vertex connected to {0}. Enter \"Q\" to quit: ", selecedVertexName);
+                                var message = string.Format("\nEnter the name for a vertex connected to {0}. Enter \"Q\" to quit: ", selectedVertexName);
 
-                                connectedVertexName = GetVertexNameInput(validVertexNameList, message2);
+                                connectedVertexName = GetVertexNameInput(message);
 
                                 if (connectedVertexName.Equals("Q"))
                                 {
                                     quit = true;
                                     finished = true;
                                 }
-                                else if (!selecedVertexName.Equals(connectedVertexName))
+                                else if (!selectedVertexName.Equals(connectedVertexName))
                                 {
                                     finished = true;
 
@@ -84,37 +82,19 @@ namespace CS317Program.Data_Structures.Graph
                             }
                         }
                     }
-
                     else
                     {
-                        Console.WriteLine("\n{0} does not exist in the graph. Select a vertex that exists in the graph", selecedVertexName);
+                        Console.WriteLine("\n{0} does not exist in the graph. Select a vertex that exists in the graph", selectedVertexName);
                     }
                 }
             }
         }
 
-        private string GetVertexNameInput(List<char> validVertexNameList, string message)
+        public Vertex GetVertex(string vertexName)
         {
-            var finished = false;
-            var name = "";
+            var vertex = _vertexList.FirstOrDefault(o => o.ToString().Equals(vertexName));
 
-            while (!finished)
-            {
-                Console.Write(message);
-
-                name = GetSingleCharacterInput();
-
-                if (validVertexNameList.Any(o => o.ToString().Equals(name)))
-                {
-                    finished = true;
-                }
-                else
-                {
-                    Console.WriteLine("\nInvalid vertex name selected");
-                }
-            }
-
-            return name;
+            return vertex;
         }
 
         public string GetAdjacencyList()
@@ -123,7 +103,7 @@ namespace CS317Program.Data_Structures.Graph
 
             foreach (var item in _vertexList)
             {
-                str += string.Format("\n{0}", item.GetAdjacentVertexList());
+                str += string.Format("\n{0}", item.GetAdjacentVertexListString());
             }
 
             return str;

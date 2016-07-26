@@ -10,8 +10,8 @@ namespace CS317Program.Data_Structures.Graph
         private List<Vertex> _adjacentVertexList;
 
         public bool visited = false;
-        public int dfsStepDiscovered = 0;
-        public int dfsStepProcessed = 0;
+        public int dfsStepDiscovered = -1;
+        public int dfsStepProcessed = -1;
 
         public Vertex(string name)
         {
@@ -35,12 +35,17 @@ namespace CS317Program.Data_Structures.Graph
             return true;
         }
 
+        public List<Vertex> GetAdjacentVertexList()
+        {
+            return _adjacentVertexList;
+        }
+
         public override string ToString()
         {
             return _name;
         }
 
-        public string GetAdjacentVertexList()
+        public string GetAdjacentVertexListString()
         {
             var str = _name;
 
@@ -50,6 +55,11 @@ namespace CS317Program.Data_Structures.Graph
             }
 
             return str;
+        }
+
+        public string GetDfsStatusString()
+        {
+            return string.Format("{0}: {1}/{2}", _name, dfsStepDiscovered, dfsStepProcessed);
         }
     }
 }

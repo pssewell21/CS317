@@ -1,11 +1,16 @@
 ﻿using CS317Program.Data_Structures.Graph;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CS317Program
 {
     class BaseClass
     {
+        readonly List<string> validVertexNames = new List<string> { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "Q" };
+
+        #region Simple Data Type Input Methods
+
         protected int GetIntegerInput()
         {
             var input = Console.ReadLine();
@@ -43,6 +48,10 @@ namespace CS317Program
                 return "1";
             }
         }
+
+        #endregion
+
+        #region Array Methods
 
         protected int[] ReadArray()
         {
@@ -92,7 +101,11 @@ namespace CS317Program
             }
         }
 
-        protected Graph ReadGraph()
+        #endregion
+
+        #region Graph Methods
+
+        protected Graph GetGraphInput()
         {
             var finished = false;
             int numVertices = 0;
@@ -115,11 +128,33 @@ namespace CS317Program
 
             var graph = new Graph(numVertices);
 
-            char[] validVertexNames = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'Q' };
-
-            graph.GetVertexInput(new List<char>(validVertexNames));
+            graph.GetVertexInput();
 
             return graph;
+        }
+
+        protected string GetVertexNameInput(string message)
+        {
+            var finished = false;
+            var name = "";
+
+            while (!finished)
+            {
+                Console.Write(message);
+
+                name = GetSingleCharacterInput();
+
+                if (validVertexNames.Any(o => o.Equals(name)))
+                {
+                    finished = true;
+                }
+                else
+                {
+                    Console.WriteLine("\nInvalid vertex name selected");
+                }
+            }
+
+            return name;
         }
 
         protected void PrintGraphAdjacencyList(Graph graph)
@@ -127,11 +162,17 @@ namespace CS317Program
             Console.WriteLine(graph.GetAdjacencyList());
         }
 
+        #endregion
+
+        #region Error Handling
+
         protected void HandleException(Exception e)
         {
 #if DEBUG
             Console.WriteLine("\nWARNING - Exception Occurred:\n\n{0}\n{1}", e.Message, e.StackTrace);
 #endif
         }
+
+        #endregion
     }
 }
