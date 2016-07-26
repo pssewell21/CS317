@@ -79,7 +79,7 @@ namespace CS317Program {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BreadthFirstSearch.
+        ///   Looks up a localized string similar to Breadth First Search.
         /// </summary>
         internal static string BreadthFirstSearchName {
             get {

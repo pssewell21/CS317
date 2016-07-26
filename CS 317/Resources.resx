@@ -124,7 +124,7 @@
     <value>3</value>
   </data>
   <data name="BreadthFirstSearchName" xml:space="preserve">
-    <value>BreadthFirstSearch</value>
+    <value>Breadth First Search</value>
   </data>
   <data name="BreadthFirstSearchValue" xml:space="preserve">
     <value>10</value>

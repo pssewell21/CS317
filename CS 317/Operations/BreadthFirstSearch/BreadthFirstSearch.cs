@@ -34,6 +34,7 @@ namespace CS317Program.Operations.BreadthFirstSearch
             while (queue.Count != 0)
             {
                 var peekVertex = queue.Peek();
+                var enqueueingOccurred = false;
 
                 foreach (var v in peekVertex.GetAdjacentVertexList())
                 {
@@ -43,11 +44,16 @@ namespace CS317Program.Operations.BreadthFirstSearch
                         visited.Add(v);
                         v.bfsStepDiscovered = step;
                         Console.WriteLine("{0}", v.GetBfsStatusString());
+                        enqueueingOccurred = true;
                     }
                 }
 
                 queue.Dequeue();
-                step++;
+
+                if (enqueueingOccurred)
+                {
+                    step++;
+                }  
             }
         }
 
