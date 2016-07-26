@@ -12,6 +12,9 @@ namespace CS317Program.Data_Structures.Graph
         public int dfsStepDiscovered = 0;
         public int dfsStepProcessed = 0;
 
+        public int bfsStepDiscovered = 0;
+        public bool bfsVertexProcessed = false;
+
         public Vertex(string name)
         {
             _name = name;
@@ -59,6 +62,11 @@ namespace CS317Program.Data_Structures.Graph
         public string GetDfsStatusString()
         {
             return string.Format("{0}: {1}/{2}", _name, dfsStepDiscovered, dfsStepProcessed);
+        }
+
+        public string GetBfsStatusString()
+        {
+            return string.Format("{0}: {1}", _name, bfsStepDiscovered);
         }
     }
 }

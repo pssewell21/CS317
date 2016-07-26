@@ -11,6 +11,7 @@ namespace CS317Program.Operations.DepthFirstSearch
         
         public void Run()
         {
+            Console.WriteLine("NOTE: Enter the directed graph from the root down and add adjacent vertex names from left to right");
             _graph = GetGraphInput();
             PrintGraphAdjacencyList(_graph);
 

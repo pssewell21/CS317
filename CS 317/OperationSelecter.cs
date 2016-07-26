@@ -31,6 +31,7 @@ namespace CS317Program
             menu += string.Format("\n{0}. {1}", Resources.BruteForcePasswordGeneratorCSharpValue, Resources.BruteForcePasswordGeneratorCSharpName);
             menu += string.Format("\n{0}. {1}", Resources.QuickSortValue, Resources.QuickSortName);
             menu += string.Format("\n{0}. {1}", Resources.DepthFirstSearchValue, Resources.DepthFirstSearchName);
+            menu += string.Format("\n{0}. {1}", Resources.BreadthFirstSearchValue, Resources.BreadthFirstSearchName);
             menu += string.Format("\n{0}. {1}", Resources.QuitValue, Resources.QuitName);
 
             Console.WriteLine(menu);

@@ -79,6 +79,24 @@ namespace CS317Program {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BreadthFirstSearch.
+        /// </summary>
+        internal static string BreadthFirstSearchName {
+            get {
+                return ResourceManager.GetString("BreadthFirstSearchName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10.
+        /// </summary>
+        internal static string BreadthFirstSearchValue {
+            get {
+                return ResourceManager.GetString("BreadthFirstSearchValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Brute Force Password Generator C#.
         /// </summary>
         internal static string BruteForcePasswordGeneratorCSharpName {

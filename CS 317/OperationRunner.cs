@@ -1,4 +1,5 @@
 ﻿using CS317Program.Operations.ArrayIsSorted;
+using CS317Program.Operations.BreadthFirstSearch;
 using CS317Program.Operations.BubbleSort;
 using CS317Program.Operations.DepthFirstSearch;
 using CS317Program.Operations.FactorialCalculator;
@@ -52,6 +53,10 @@ namespace CS317Program
                 case 9:
                     var t9 = new DepthFirstSearch();
                     t9.Run();
+                    break;
+                case 10:
+                    var t10 = new BreadthFirstSearch();
+                    t10.Run();
                     break;
                 // Quit case
                 case 0:

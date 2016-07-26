@@ -123,6 +123,12 @@
   <data name="ArrayIsSortedValue" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="BreadthFirstSearchName" xml:space="preserve">
+    <value>BreadthFirstSearch</value>
+  </data>
+  <data name="BreadthFirstSearchValue" xml:space="preserve">
+    <value>10</value>
+  </data>
   <data name="BruteForcePasswordGeneratorCSharpName" xml:space="preserve">
     <value>Brute Force Password Generator C#</value>
   </data>

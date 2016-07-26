@@ -49,6 +49,7 @@
     <Compile Include="OperationRunner.cs" />
     <Compile Include="OperationSelecter.cs" />
     <Compile Include="Operations\ArrayIsSorted\ArrayIsSorted.cs" />
+    <Compile Include="Operations\BreadthFirstSearch\BreadthFirstSearch.cs" />
     <Compile Include="Operations\BruteForcePasswordGenerator\BruteForcePasswordGenerator.cs" />
     <Compile Include="Operations\BubbleSort\BubbleSort.cs" />
     <Compile Include="Operations\DepthFirstSearch\DepthFirstSearch.cs" />

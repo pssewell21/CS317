@@ -112,7 +112,7 @@ namespace CS317Program
 
             while (!finished)
             {
-                Console.Write("\nEnter the number of vertices in the Graph: ");
+                Console.Write("\nEnter the number of vertices in the directed graph: ");
 
                 numVertices = GetIntegerInput();
 
