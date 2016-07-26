@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CS317Program.Data_Structures.AdjacencyList;
+using System;
 using System.Collections.Generic;
 
 namespace CS317Program
@@ -67,6 +68,36 @@ namespace CS317Program
             {
                 Console.WriteLine("Array is empty");
             }
+        }
+
+        protected AdjacencyList ReadAdjacencyList()
+        {
+            Console.WriteLine("\nEnter the number of vertices in the Adjacency List");
+            var finished = false;
+            int numberOfVertices = 0;
+
+            while (!finished)
+            {
+                numberOfVertices = GetIntegerInput();
+
+                if (numberOfVertices < 1 || numberOfVertices > 10)
+                {
+                    Console.WriteLine("\nInvalid input, valid values are integers 1 - 10");
+                }
+                else
+                {
+                    finished = true;
+                }
+            }
+
+            var list = new AdjacencyList(numberOfVertices);
+
+            return list;
+        }
+
+        protected void PrintAdjacencyList(AdjacencyList list)
+        {
+            Console.WriteLine(list.ToString());
         }
 
         protected void HandleException(Exception e)

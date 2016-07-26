@@ -44,11 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass.cs" />
+    <Compile Include="Data Structures\AdjacencyList\AdjacencyList.cs" />
+    <Compile Include="Data Structures\AdjacencyList\AdjacencyListItem.cs" />
+    <Compile Include="Data Structures\Graph\Vertex.cs" />
     <Compile Include="OperationRunner.cs" />
     <Compile Include="OperationSelecter.cs" />
     <Compile Include="Operations\ArrayIsSorted\ArrayIsSorted.cs" />
     <Compile Include="Operations\BruteForcePasswordGenerator\BruteForcePasswordGenerator.cs" />
     <Compile Include="Operations\BubbleSort\BubbleSort.cs" />
+    <Compile Include="Operations\DepthFirstSearch\DepthFirstSearch.cs" />
     <Compile Include="Operations\FactorialCalculator\FactorialCalculator.cs" />
     <Compile Include="Operations\MergeSort\MergeSort.cs" />
     <Compile Include="Operations\QuickSort\QuickSort.cs" />
@@ -77,6 +81,7 @@
       <Name>Library</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
