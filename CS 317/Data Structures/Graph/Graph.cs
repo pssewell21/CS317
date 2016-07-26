@@ -79,7 +79,7 @@ namespace CS317Program.Data_Structures.Graph
                                 }
                                 else
                                 {
-                                    Console.WriteLine("\nA Vertex cannot be connected to itself");
+                                    Console.WriteLine("\nA vertex cannot be connected to itself");
                                 }
                             }
                         }
@@ -110,7 +110,7 @@ namespace CS317Program.Data_Structures.Graph
                 }
                 else
                 {
-                    Console.WriteLine("\nInvalid Vertex name selected");
+                    Console.WriteLine("\nInvalid vertex name selected");
                 }
             }
 

@@ -94,12 +94,13 @@ namespace CS317Program
 
         protected Graph ReadGraph()
         {
-            Console.Write("\nEnter the number of vertices in the Graph: ");
             var finished = false;
             int numVertices = 0;
 
             while (!finished)
             {
+                Console.Write("\nEnter the number of vertices in the Graph: ");
+
                 numVertices = GetIntegerInput();
 
                 if (numVertices < 1 || numVertices > 10)
@@ -128,7 +129,9 @@ namespace CS317Program
 
         protected void HandleException(Exception e)
         {
+#if DEBUG
             Console.WriteLine("\nWARNING - Exception Occurred:\n\n{0}\n{1}", e.Message, e.StackTrace);
+#endif
         }
     }
 }
