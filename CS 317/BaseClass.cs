@@ -22,6 +22,28 @@ namespace CS317Program
             }
         }
 
+        protected string GetSingleCharInput()
+        {
+            var input = Console.ReadLine();
+
+            try
+            {
+                if (input.Length > 1)
+                {
+                    throw new Exception("Invalid number of characters entered.  Only one character is accepted.");
+                }
+
+                input = input.ToUpper();
+                
+                return input;
+            }
+            catch (Exception e)
+            {
+                HandleException(e);
+                return '1';
+            }
+        }
+
         protected int[] ReadArray()
         {
             Console.Write("\nEnter the numerical values to be entered into the array: ");
@@ -91,6 +113,10 @@ namespace CS317Program
             }
 
             var list = new AdjacencyList(numberOfVertices);
+
+            char[] validVertexNames = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'Q' };
+
+            list.ReadConnectedVertices(new List<char>(validVertexNames));
 
             return list;
         }

@@ -15,6 +15,16 @@ namespace CS317Program.Data_Structures.AdjacencyList
             _vertex = vertex;
         }
 
+        public Vertex GetVertex()
+        {
+            return _vertex;
+        }
+
+        public string GetVertexName()
+        {
+            return _vertex.ToString();
+        }
+        
         public bool AddAttachedVertex(Vertex vertex)
         {
             var name = vertex.ToString();
