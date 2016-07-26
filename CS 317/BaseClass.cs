@@ -1,4 +1,4 @@
-﻿using CS317Program.Data_Structures.AdjacencyList;
+﻿using CS317Program.Data_Structures.Graph;
 using System;
 using System.Collections.Generic;
 
@@ -22,7 +22,7 @@ namespace CS317Program
             }
         }
 
-        protected string GetSingleCharInput()
+        protected string GetSingleCharacterInput()
         {
             var input = Console.ReadLine();
 
@@ -40,7 +40,7 @@ namespace CS317Program
             catch (Exception e)
             {
                 HandleException(e);
-                return '1';
+                return "1";
             }
         }
 
@@ -92,17 +92,17 @@ namespace CS317Program
             }
         }
 
-        protected AdjacencyList ReadAdjacencyList()
+        protected Graph ReadGraph()
         {
-            Console.WriteLine("\nEnter the number of vertices in the Adjacency List");
+            Console.Write("\nEnter the number of vertices in the Graph: ");
             var finished = false;
-            int numberOfVertices = 0;
+            int numVertices = 0;
 
             while (!finished)
             {
-                numberOfVertices = GetIntegerInput();
+                numVertices = GetIntegerInput();
 
-                if (numberOfVertices < 1 || numberOfVertices > 10)
+                if (numVertices < 1 || numVertices > 10)
                 {
                     Console.WriteLine("\nInvalid input, valid values are integers 1 - 10");
                 }
@@ -112,18 +112,18 @@ namespace CS317Program
                 }
             }
 
-            var list = new AdjacencyList(numberOfVertices);
+            var graph = new Graph(numVertices);
 
             char[] validVertexNames = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'Q' };
 
-            list.ReadConnectedVertices(new List<char>(validVertexNames));
+            graph.GetVertexInput(new List<char>(validVertexNames));
 
-            return list;
+            return graph;
         }
 
-        protected void PrintAdjacencyList(AdjacencyList list)
+        protected void PrintGraphAdjacencyList(Graph graph)
         {
-            Console.WriteLine(list.ToString());
+            Console.WriteLine(graph.GetAdjacencyList());
         }
 
         protected void HandleException(Exception e)

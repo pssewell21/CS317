@@ -141,6 +141,12 @@
   <data name="BubbleSortValue" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="DepthFirstSearchName" xml:space="preserve">
+    <value>Depth First Search</value>
+  </data>
+  <data name="DepthFirstSearchValue" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="FactorialCalculatorName" xml:space="preserve">
     <value>Factorial Calculator</value>
   </data>

@@ -1,9 +1,10 @@
 ﻿using CS317Program.Operations.ArrayIsSorted;
 using CS317Program.Operations.BubbleSort;
+using CS317Program.Operations.DepthFirstSearch;
 using CS317Program.Operations.FactorialCalculator;
 using CS317Program.Operations.MergeSort;
-using CS317Program.Operations.TelephoneDirectorySearch;
 using CS317Program.Operations.QuickSort;
+using CS317Program.Operations.TelephoneDirectorySearch;
 using System;
 using BruteForcePasswordGenerator = Library.Operations.BruteForcePasswordGenerator;
 using BruteForcePasswordGeneratorCSharp = CS317Program.Operations.BruteForcePasswordGenerator;
@@ -47,6 +48,10 @@ namespace CS317Program
                 case 8:
                     var t8 = new QuickSort();
                     t8.Run();
+                    break;
+                case 9:
+                    var t9 = new DepthFirstSearch();
+                    t9.Run();
                     break;
                 // Quit case
                 case 0:

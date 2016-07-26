@@ -133,6 +133,24 @@ namespace CS317Program {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Depth First Search.
+        /// </summary>
+        internal static string DepthFirstSearchName {
+            get {
+                return ResourceManager.GetString("DepthFirstSearchName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 9.
+        /// </summary>
+        internal static string DepthFirstSearchValue {
+            get {
+                return ResourceManager.GetString("DepthFirstSearchValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Factorial Calculator.
         /// </summary>
         internal static string FactorialCalculatorName {

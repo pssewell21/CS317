@@ -1,15 +1,15 @@
-﻿using CS317Program.Data_Structures.AdjacencyList;
+﻿using CS317Program.Data_Structures.Graph;
 
 namespace CS317Program.Operations.DepthFirstSearch
 {
     class DepthFirstSearch : BaseClass
     {
-        private AdjacencyList _list;
+        private Graph _graph;
         
         public void Run()
         {
-            _list = ReadAdjacencyList();
-            PrintAdjacencyList(_list);
+            _graph = ReadGraph();
+            PrintGraphAdjacencyList(_graph);
         }
     }
 }
