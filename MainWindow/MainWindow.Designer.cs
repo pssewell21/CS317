@@ -1,6 +1,6 @@
-﻿namespace Turtle
+﻿namespace MainWindow
 {
-    partial class Turtle
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Turtle
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 411);
-            this.Name = "Turtle";
-            this.Text = "Turtle";
-            this.Load += new System.EventHandler(this.Turtle_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "Form1";
         }
 
         #endregion

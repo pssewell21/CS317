@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TurtleExample
+namespace MainWindow
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace TurtleExample
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TurtleExample());
+            Application.Run(new MainWindow());
         }
     }
 }

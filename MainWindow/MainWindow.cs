@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Turtle
+namespace MainWindow
 {
-    public partial class Turtle : Form
+    public partial class MainWindow : Form
     {
-        public Turtle()
+        public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Turtle_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
